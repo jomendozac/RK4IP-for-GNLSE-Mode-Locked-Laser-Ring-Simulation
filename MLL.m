@@ -7,7 +7,7 @@ clear all;  % Borra todas las variables de la memoria RAM para evitar conflictos
 clc;        % Limpia la consola de comandos de MATLAB (la pantalla de texto).
 
 % --- GESTIÓN DE CARPETAS ---
-% Verifica si existe una carpeta llamada 'L100x120x100_10dB' en el directorio actual.
+% Verifica si existe una carpeta llamada 'outputring' en el directorio actual.
 if ~exist('outputring', 'dir')
     mkdir('outputring'); % Si no existe, la crea (mkdir = make directory). Aquí se guardarán las fotos.
 end
@@ -266,4 +266,5 @@ for loop = 1:loopmax
         saveas(gcf, strcat('file', num2str(indx), '.png')); % Guarda lo que se ve en pantalla como PNG.
         cd ../               % Vuelve a salir a la carpeta principal (CRUCIAL).
     end
+
 end
